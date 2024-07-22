@@ -1,0 +1,52 @@
+<div class="auth-page">
+	<div class="container page">
+		<div class="row">
+			<div class="col-md-6 offset-md-3 col-xs-12">
+				<h1 class="text-xs-center">Sign Up</h1>
+				<p class="text-xs-center">
+					<a routerLink="/login">Have an account?</a>
+				</p>
+				BACKEND ERRORS
+				<form [formGroup]="form" (ngSubmit)="onSubmit()">
+					<fieldset class="form-group">
+						<input
+							type="text"
+							name="username"
+							placeholder="username"
+							id=""
+							class="form-control form-control-lg"
+							formControlName="username"
+						/>
+					</fieldset>
+					<fieldset class="form-group">
+						<input
+							type="text"
+							name="email"
+							placeholder="email"
+							id=""
+							class="form-control form-control-lg"
+							formControlName="email"
+						/>
+					</fieldset>
+					<fieldset class="form-group">
+						<input
+							type="password"
+							name="password"
+							placeholder="password"
+							id=""
+							class="form-control form-control-lg"
+							formControlName="password"
+						/>
+					</fieldset>
+					<button
+						type="submit"
+						class="btn btn-lg btn-primary pull-xs-right"
+						[disabled]="isSubmitting$ | async"
+					>
+						Sign Up
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
